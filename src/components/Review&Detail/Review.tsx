@@ -9,7 +9,7 @@ const poppins = Poppins({
 
 const Review = () => {
   return (
-    <div className="bg-[#007BFF] sm:bg-white flex flex-row gap-[42px] flex-wrap justify-center mt-[21px] h-full pb-[50px]">
+    <div className="bg-[#007BFF] sm:bg-white flex flex-row gap-[42px] flex-wrap justify-center pt-[21px] h-full pb-[50px]">
       <div className="flex flex-col w-auto mx-[22px]">
         <div
           className={`${poppins.className} w-full flex justify-start text-[#080E14] text-[32px] font-[700] py-[20px]`}

@@ -340,6 +340,62 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="bg-[#F1F2F6] h-auto py-[32px] px-[20px sm:hidden flex flex-col items-center gap-[36px]">
+        <Image
+          src="/images/books3.png"
+          alt="Your Logo"
+          width={335}
+          height={231}
+        />
+        <div className="flex flex-col gap-3">
+          {" "}
+          <div className="flex flex-row gap-3">
+            <Image
+              src="/images/checklist.png"
+              alt="Your Logo"
+              width={18}
+              height={18}
+            />
+            <div
+              className={` ${poppins.className} text-[#000] text-[14px] font-normal`}
+            >
+              based on latest neet pattern
+            </div>
+          </div>
+          <div className="flex flex-row gap-3">
+            <Image
+              src="/images/checklist.png"
+              alt="Your Logo"
+              width={18}
+              height={18}
+            />
+            <div
+              className={` ${poppins.className} text-[#000] text-[14px] font-normal`}
+            >
+              concise theory + practice questions
+            </div>
+          </div>
+          <div className="flex flex-row gap-3">
+            <Image
+              src="/images/checklist.png"
+              alt="Your Logo"
+              width={18}
+              height={18}
+            />
+            <div
+              className={` ${poppins.className} text-[#000] text-[14px] font-normal`}
+            >
+              topic-wise Detailed MCQs for revision
+            </div>
+          </div>
+        </div>
+        <Image
+          src="/images/seeNow.png"
+          alt="Your Logo"
+          width={335}
+          height={160}
+        />
+      </div>
       <Review />
     </>
   );
