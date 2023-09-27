@@ -397,6 +397,28 @@ export default function Home() {
         />
       </div>
       <Review />
+      <div className="hidden w-auto bg-[#00364E] sm:flex flex-col justify-center items-center py-[80px] gap-[40px]">
+      <Image
+          src="/images/neet.png"
+          alt="Your Logo"
+          width={880}
+          height={144}
+        />
+      <Image
+          src="/images/testSeries.png"
+          alt="Your Logo"
+          width={806}
+          height={128}
+        />
+      </div>
+      <div className="sm:hidden bg-[#00364E] flex justify-center">
+      <Image
+          src="/images/testSeries2.png"
+          alt="Your Logo"
+          width={375}
+          height={332}
+        />
+      </div>
     </>
   );
 }
