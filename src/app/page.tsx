@@ -1,113 +1,346 @@
-import Image from 'next/image'
+"use client";
+import React, { useState } from "react";
+import Navbar from "@/components/Navbar";
+import Image from "next/image";
+import { Poppins } from "next/font/google";
+import Review from "@/components/Review&Detail/Review";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: "500",
+});
 
 export default function Home() {
+  const [imagePath, setImagePath] = useState("/images/book.png");
+
+  const toggleImage = () => {
+    if (imagePath === "/images/book.png") {
+      setImagePath("/images/book2.png");
+    } else {
+      setImagePath("/images/book.png");
+    }
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <Navbar />
+      <div className="h-full bg-[#007BFF] pb-[61px]">
+        <div className="sm:flex flex-wrap sm:flex-row sm:gap-[40px] sm:mx-[112px] sm:pt-[28px]">
+          <div className="flex flex-col gap-[20px]">
+            <div className="sm:w-[588px] sm:h-[510px] sm:rounded-[20px] sm:bg-gradient-to-br from-blue-100 to-blue-200 flex flex-col">
+              <div className="w-full flex flex-col justify-end mt-[32px]">
+                <div className="hidden sm:flex sm:justify-end sm:w-full">
+                  <div
+                    className="h-[32px] w-[32px] mx-[32px] rounded-[50px] bg-white flex justify-center items-center"
+                    onClick={toggleImage}
+                  >
+                    <Image
+                      src="/images/share.png"
+                      alt="Your Logo"
+                      width={19.2}
+                      height={19.2}
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-row gap-[55px] justify-center w-full relative bottom-6">
+                  <div className="hidden sm:h-full sm:flex sm:flex-col sm:justify-center">
+                    <div
+                      className="h-[32px] w-[32px] bg-white rounded-[8px] "
+                      onClick={toggleImage}
+                    >
+                      <Image
+                        src="/images/left.png"
+                        alt="Your Logo"
+                        width={32}
+                        height={32}
+                      />
+                    </div>
+                  </div>
+                  <Image
+                    src={imagePath} // Use the dynamic image path here
+                    alt="Your Logo"
+                    width={332}
+                    height={442}
+                  />
+                  <div className="hidden sm:h-full sm:flex sm:flex-col sm:justify-center">
+                    <div
+                      className="h-[32px] w-[32px] bg-white rounded-[8px] transform rotate-180"
+                      onClick={toggleImage}
+                    >
+                      <Image
+                        src="/images/left.png"
+                        alt="Your Logo"
+                        width={32}
+                        height={32}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="hidden sm:w-[588px] sm:h-[60px] sm:rounded-[12px] sm:bg-[#00364E] sm:flex sm:justify-center sm:items-center sm:text-[#FFF] sm:text-[16px] sm:font-normal">
+              {`what's in it for you?`}
+            </div>
+          </div>
+          <div className="mx-[20px] sm:flex sm:flex-col sm:h-auto">
+            <div
+              className={`${poppins.className} w-auto text-white sm:text-[48px] text-[20px] font-bold leading-60 `}
+            >
+              IL books for{" "}
+              <span className="text-[#FCDE5A]">NEET Foundation</span>
+              <span className="sm:text-[32px] font-[400]">
+                {" "}
+                - class 8, 9 & 10
+              </span>
+            </div>
+            <div className="flex flex-row mt-[8px] gap-2 w-auto flex-wrap">
+              <div
+                className={`${poppins.className} text-[14px] sm:text-[18px] text-[#FFF] font-[600]`}
+              >
+                4.5
+              </div>
+              <div className="flex flex-row gap-4">
+                {" "}
+                <div className="flex flex-row gap-1">
+                  <div className="h-full w-full flex items-center">
+                    <Image
+                      src="/images/star.png"
+                      alt="Your Logo"
+                      width={15}
+                      height={14}
+                    />
+                  </div>
+                  <div className="h-full w-full flex items-center">
+                    <Image
+                      src="/images/star.png"
+                      alt="Your Logo"
+                      width={15}
+                      height={14}
+                    />
+                  </div>
+                  <div className="h-full w-full flex items-center">
+                    <Image
+                      src="/images/star.png"
+                      alt="Your Logo"
+                      width={15}
+                      height={14}
+                    />
+                  </div>
+                  <div className="h-full w-full flex items-center">
+                    <Image
+                      src="/images/star.png"
+                      alt="Your Logo"
+                      width={15}
+                      height={14}
+                    />
+                  </div>
+                  <div className="h-full w-full flex items-center">
+                    <Image
+                      src="/images/star_half.png"
+                      alt="Your Logo"
+                      width={15}
+                      height={14}
+                    />
+                  </div>
+                </div>
+                <div className=" flex flex-row">
+                  <div className="h-auto border-l border-gray-300 "></div>
+                </div>
+                <div
+                  className={`${poppins.className} text-[#FFF] text-[12px] sm:text-[14px] font-[500]`}
+                >
+                  171 Reviews
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-row flex-wrap mt-[25.5px] w-auto gap-3">
+              <div className="flex w-full sm:w-[188px] sm:flex-col justify-between items-start py-2 px-[14px] rounded-[12px] bg-[#FFF] border-[2px] border-solid border-[#06AA2F] gap-[10px]">
+                <div>
+                  {" "}
+                  <div className="relative right-[21.5px]">
+                    {" "}
+                    <Image
+                      src="/images/Tags.png"
+                      alt="Your Logo"
+                      width={132}
+                      height={26}
+                    />
+                  </div>
+                  <div
+                    className={`${poppins.className} text-[#080E14] text-[14px] font-[600]`}
+                  >
+                    class 8, 9 & 10
+                  </div>
+                </div>
+                <div>
+                  {" "}
+                  <div
+                    className={`${poppins.className} text-[#06AA2F] text-[14px] font-[600]`}
+                  >
+                    save 33%
+                  </div>
+                  <div className="flex flex-row items-center justify-center gap-1">
+                    <div
+                      className={`${poppins.className} text-[#007BFF] text-[18px] font-[700]`}
+                    >
+                      ₹ 8,660
+                    </div>
+                    <div className="h-[21px] flex justify-center items-center">
+                      <Image
+                        src="/images/price.png"
+                        alt="Your Logo"
+                        width={53}
+                        height={21}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative top-4 flex justify-between w-full h-auto sm:w-[188px] sm:h-[118px] sm:flex-col sm:items-start py-2 px-[14px] rounded-[12px] bg-[#FFF] border-[2px] border-solid border-[#06AA2F] sm:gap-[10px]">
+                <div
+                  className={`${poppins.className} text-[#080E14] text-[14px] font-[600]`}
+                >
+                  class 8 & 9
+                </div>
+                <div>
+                  {" "}
+                  <div
+                    className={`${poppins.className} text-[#06AA2F] text-[14px] font-[600]`}
+                  >
+                    save 12%
+                  </div>
+                  <div className="flex flex-row items-center justify-center gap-1">
+                    <div
+                      className={`${poppins.className} text-[#007BFF] text-[18px] font-[700]`}
+                    >
+                      ₹ 6,660
+                    </div>
+                    <div className="h-[21px] flex justify-center items-center">
+                      <Image
+                        src="/images/price.png"
+                        alt="Your Logo"
+                        width={53}
+                        height={21}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative top-4 flex w-full h-auto sm:w-[188px] sm:h-[118px] sm:flex-col justify-between items-start py-2 px-[14px] rounded-[12px] bg-[#FFF] border-[2px] border-solid border-[#06AA2F] gap-[10px]">
+                <div
+                  className={`${poppins.className} text-[#080E14] text-[14px] font-[600]`}
+                >
+                  class 8
+                </div>
+                <div>
+                  {" "}
+                  <div
+                    className={`${poppins.className} text-[#06AA2F] text-[14px] font-[600]`}
+                  ></div>
+                  <div className="flex flex-row items-center justify-center gap-1">
+                    <div
+                      className={`${poppins.className} text-[#007BFF] text-[18px] font-[700]`}
+                    >
+                      ₹ 5,000
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="hidden sm:mt-[20px] sm:max-w-[588px] sm:flex sm:flex-row sm:w-auto sm:justify-center sm:items-center sm:gap-[6px] sm:rounded-[12px] sm:bg-[#F1F2F6] sm:px-[12px]">
+              <div
+                className={`${poppins.className} py-[8px] px-[16px] text-[#080E14] text-[14px] font-[500]`}
+              >
+                Biology 24 Books
+              </div>
+              <div
+                className={`${poppins.className} py-[8px] px-[16px] text-[#080E14] text-[14px] font-[500]`}
+              >
+                Physics 12 Books
+              </div>
+              <div
+                className={`${poppins.className} py-[8px] px-[16px] text-[#080E14] text-[14px] font-[500]`}
+              >
+                Chemistry 12 Books
+              </div>
+            </div>
+            <div className="hidden sm:flex sm:flex-row sm:gap-[20px] sm:flex-wrap sm:mt-[32px]">
+              <div className="flex flex-row gap-3">
+                <Image
+                  src="/images/checklist.png"
+                  alt="Your Logo"
+                  width={24}
+                  height={24}
+                />
+                <div
+                  className={` ${poppins.className} text-[#FFF] text-[14px] font-normal`}
+                >
+                  based on latest neet pattern
+                </div>
+              </div>
+              <div className="flex flex-row gap-3">
+                <Image
+                  src="/images/checklist.png"
+                  alt="Your Logo"
+                  width={24}
+                  height={24}
+                />
+                <div
+                  className={` ${poppins.className} text-[#FFF] text-[14px] font-normal`}
+                >
+                  concise theory + practice questions
+                </div>
+              </div>
+              <div className="flex flex-row gap-3">
+                <Image
+                  src="/images/checklist.png"
+                  alt="Your Logo"
+                  width={24}
+                  height={24}
+                />
+                <div
+                  className={` ${poppins.className} text-[#FFF] text-[14px] font-normal`}
+                >
+                  topic-wise Detailed MCQs for revision
+                </div>
+              </div>
+            </div>
+            <div className="hidden sm:flex sm:flex-row sm:gap-3 sm:mt-[30px]">
+              <div className="flex px-[32px] py-[12px] justify-center items-center gap-[10px] rounded-[12px] border-[1px] border-solid border-[#FFF]">
+                <div className="flex flex-row gap-2">
+                  <div
+                    className={`${poppins.className} text-[#FFF] text-[16px] font-[600]`}
+                  >
+                    download sample
+                  </div>
+                  <Image
+                    src="/images/download.png"
+                    alt="Your Logo"
+                    width={24}
+                    height={24}
+                  />
+                </div>
+              </div>
+              <div className="flex px-[62px] py-[12px] justify-center items-center gap-[10px] rounded-[12px] bg-[#FFF] ">
+                <div className="flex flex-row gap-2">
+                  <div
+                    className={`${poppins.className} text-[#007BFF] text-[16px] font-[600]`}
+                  >
+                    buy now
+                  </div>
+                  <Image
+                    src="/images/buy.png"
+                    alt="Your Logo"
+                    width={24}
+                    height={24}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      <Review />
+    </>
+  );
 }
