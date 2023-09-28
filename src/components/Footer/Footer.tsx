@@ -13,7 +13,7 @@ const Footer = () => {
           height={1363}
         />
       </div>
-      <div className="py-[34px] sm:h-auto px-[20px] sm:flex sm:justify-center sm:items-center">
+      <div className="py-[34px] h-auto px-[20px] flex justify-center items-center sm:hidden">
         <Image
           src="/images/footer2.png"
           alt="Your Logo"
