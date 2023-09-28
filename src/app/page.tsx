@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { Poppins } from "next/font/google";
 import Review from "@/components/Review&Detail/Review";
+import Bookdemo from "@/components/BookDemo/Bookdemo";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -24,7 +25,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="h-full bg-[#007BFF] pb-[61px]">
+      <div className="h-full bg-[#007BFF] pb-[61px] flex justify-center">
         <div className="sm:flex flex-wrap sm:flex-row sm:gap-[40px] sm:mx-[112px] sm:pt-[28px]">
           <div className="flex flex-col gap-[20px]">
             <div className="sm:w-[588px] sm:h-[510px] sm:rounded-[20px] sm:bg-gradient-to-br from-blue-100 to-blue-200 flex flex-col">
@@ -419,6 +420,23 @@ export default function Home() {
           height={332}
         />
       </div>
+      <div className="bg-[#F1F2F6] pt-[80px] h-auto w-full sm:flex justify-center hidden">
+      <Image
+                      src="/images/app.png"
+                      alt="Your Logo"
+                      width={1040}
+                      height={659}
+                    />
+      </div>
+      <div className="bg-[#F1F2F6] h-auto w-full flex justify-center sm:hidden">
+      <Image
+          src="/images/app2.png"
+          alt="Your Logo"
+          width={375}
+          height={3023}
+        />
+      </div>
+      <Bookdemo />
     </>
   );
 }
