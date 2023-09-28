@@ -9,7 +9,7 @@ const poppins = Poppins({
 
 const Bookdemo = () => {
   return (
-    <div className="bg-[#00364E] sm:flex h-auto flex-col gap-[32px] sm:flex-row flex-wrap justify-center sm:py-[78px] sm:gap-[108px]  py-[32px] px-[20px]">
+    <div className="bg-[#00364E] sm:flex h-auto flex-col sm:flex-row flex-wrap justify-center sm:py-[78px] sm:gap-[108px]  py-[32px] px-[20px]">
       <div className="flex flex-col gap-[20px]">
         <div
           className={`${poppins.className}  w-auto h-auto text-[#FFF] text-[48px] font-[700]`}
@@ -23,7 +23,7 @@ const Bookdemo = () => {
           student.
         </div>
       </div>
-      <div className="flex flex-col gap-1 w-auto justify-center">
+      <div className="flex flex-col gap-1 w-auto justify-center mt-5">
         <div className="flex flex-row">
           <div
             className={`${poppins.className} h-[56px] w-auto bg-white rounded-tl-[20px] rounded-bl-[20px] flex justify-center items-center px-[28px] text-[16px] font-[500]  gap-1`}

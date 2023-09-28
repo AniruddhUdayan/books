@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Poppins } from "next/font/google";
 import Review from "@/components/Review&Detail/Review";
 import Bookdemo from "@/components/BookDemo/Bookdemo";
+import Footer from "@/components/Footer/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -437,6 +438,7 @@ export default function Home() {
         />
       </div>
       <Bookdemo />
+      <Footer/>
     </>
   );
 }
