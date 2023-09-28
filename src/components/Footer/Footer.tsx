@@ -7,7 +7,7 @@ const Footer = () => {
       {" "}
       <div className="hidden sm:py-[80px] sm:h-auto sm:px-[113px] sm:flex sm:justify-center sm:items-center">
         <Image
-          src="/images/footer.png"
+          src="/images/Footer.png"
           alt="Your Logo"
           width={1216}
           height={1363}
