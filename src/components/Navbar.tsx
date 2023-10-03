@@ -58,7 +58,7 @@ const Navbar = () => {
           <div
             key={index}
             onClick={() => handleItemClick(index)}
-            className={`flex  xl:px-[17px] py-[5px] items-start gap-[4px] rounded-[24px] transform hover:scale-105 transition-transform duration-300 hover:border hover:border-white cursor-pointer ${
+            className={`flex lg:px-[10px]  xl:px-[17px] py-[5px] items-start gap-[4px] rounded-[24px] transform hover:scale-105 transition-transform duration-300 hover:border hover:border-white cursor-pointer ${
               activeIndex === index
                 ? "border border-white border-opacity-25"
                 : ""
@@ -66,14 +66,14 @@ const Navbar = () => {
               activeIndex === index ? "bg-white bg-opacity-10" : "bg-opacity-10"
             } ${activeIndex === index ? "text-white" : "text-gray-300"} ${
               poppins.className
-            } xl:text-base lg:text-[12px] uppercase tracking-wide text-[10px]`}
+            } xl:text-[14px] lg:text-[12px] uppercase tracking-wide text-[10px]`}
             style={{
               transform: activeIndex === index ? "scale(1.05)" : "scale(1)",
               transition: "transform 0.2s ease-in-out",
             }}
           >
             {item}
-            <div className="">
+            <div className="h-[24px] w-[24px] flex justify-center items-center">
               <Image
                 src="/images/expand_more.png"
                 alt="Your Logo"
@@ -109,7 +109,7 @@ const Navbar = () => {
         </div>
         <div className="flex px-[10px]  justify-center items-center rounded-[20px] border border-white   bg-white transform hover:scale-105 transition-transform duration-300 cursor-pointer">
           <div
-            className={`${poppins.className} text-[#007BFF] flex justify-center items-center text-[10px] font-semibold leading-7 transform hover:scale-105 transition-transform duration-300`}
+            className={`${poppins.className} text-[#007BFF] lg:w-[47px] flex justify-center items-center text-[10px] font-semibold leading-7 transform hover:scale-105 transition-transform duration-300`}
           >
             Sign In
           </div>

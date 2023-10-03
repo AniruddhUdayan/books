@@ -42,57 +42,63 @@ export default function Home() {
     <>
       <Navbar />
       <div className="h-full bg-[#007BFF] pb-[61px] flex justify-center">
-        <div className="sm:flex flex-wrap sm:flex-row sm:gap-[40px] sm:mx-[112px] sm:pt-[28px]">
+        <div className="sm:flex sm:flex-col lg:flex-row sm:gap-[40px] sm:mx-[112px] sm:pt-[28px]">
           <div className="flex flex-col gap-[20px]">
-            <div className="flex h-full flex-row gap-[55px] justify-center w-full relative bottom-6">
-              <div className="hidden sm:h-full sm:flex sm:flex-col sm:justify-center">
-                <div
-                  className={`h-[32px] w-[32px] bg-white rounded-[8px] transform ${
-                    animationDirection === "right"
-                      ? "translate-x-[50px]"
-                      : "translate-x-0"
-                  } transition-transform`}
-                  onClick={toggleImage}
-                >
-                  <Image
-                    src="/images/left.png"
-                    alt="Your Logo"
-                    width={32}
-                    height={32}
-                  />
+            <div className="flex h-full flex-col ">
+              <div className=""> 
+                <div className="flex flex-row gap-[55px] justify-center w-full relative bottom-6 bg-[#D4E9FF]">
+                  <div className="hidden sm:h-[510px] sm:flex sm:flex-col sm:justify-center relative right-6">
+                    <div
+                      className={`h-[32px] w-[32px] bg-white rounded-[8px] transform ${
+                        animationDirection === "left"
+                          ? "translate-x-[50px]"
+                          : "translate-x-0"
+                      } transition-transform`}
+                      onClick={toggleImage}
+                    >
+                      <Image
+                        src="/images/left.png"
+                        alt="Your Logo"
+                        width={32}
+                        height={32}
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className={`h-[418px] left-2 top-6 relative overflow-hidden`}
+                  >
+                    <Image
+                      src={imagePath}
+                      alt="Your Logo"
+                      width={332}
+                      height={442}
+                    />
+                  </div>
+                  <div className="hidden sm:h-[510px] sm:flex sm:flex-col sm:justify-center relative right-6">
+                    <div
+                      className={`h-[32px] w-[32px] bg-white rounded-[8px] transform rotate-180 ${
+                        animationDirection === "right"
+                          ? "translate-x-[50px]"
+                          : "translate-x-0"
+                      } transition-transform`}
+                      onClick={toggleImage}
+                    >
+                      <Image
+                        src="/images/left.png"
+                        alt="Your Logo"
+                        width={32}
+                        height={32}
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className={`h-[418px] left-8 relative overflow-hidden`}>
-                <Image
-                  src={imagePath}
-                  alt="Your Logo"
-                  width={332}
-                  height={442}
-                />
+              <div className="hidden sm:w-[588px] sm:h-[60px] sm:rounded-[12px] sm:bg-[#00364E] sm:flex sm:justify-center sm:items-center sm:text-[#FFF] sm:text-[16px] sm:font-normal">
+                {`what's in it for you?`}
               </div>
-              <div className="hidden sm:h-full sm:flex sm:flex-col sm:justify-center">
-                <div
-                  className={`h-[32px] w-[32px] bg-white rounded-[8px] transform rotate-180 ${
-                    animationDirection === "left"
-                      ? "translate-x-[50px]"
-                      : "translate-x-0"
-                  } transition-transform`}
-                  onClick={toggleImage}
-                >
-                  <Image
-                    src="/images/left.png"
-                    alt="Your Logo"
-                    width={32}
-                    height={32}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="hidden sm:w-[588px] sm:h-[60px] sm:rounded-[12px] sm:bg-[#00364E] sm:flex sm:justify-center sm:items-center sm:text-[#FFF] sm:text-[16px] sm:font-normal">
-              {`what's in it for you?`}
             </div>
           </div>
-          <div className="mx-[20px] sm:flex sm:flex-col sm:h-auto">
+          <div className="mx-[20px] sm:flex sm:flex-col sm:h-auto sm:min-w-[410px]">
             <div
               className={`${poppins.className} w-auto text-white sm:text-[48px] text-[20px] font-bold leading-60 `}
             >
@@ -206,7 +212,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="relative top-4 flex justify-between w-full h-auto sm:w-[188px] sm:h-[118px] sm:flex-col sm:items-start py-2 px-[14px] rounded-[12px] bg-[#FFF] border-[2px] border-solid border-[#06AA2F] sm:gap-[10px]">
+              <div className="relative top-1 flex justify-between w-full h-auto sm:w-[188px] sm:h-[118px] sm:flex-col sm:items-start py-2 px-[14px] rounded-[12px] bg-[#FFF] border-[2px] border-solid border-[#06AA2F] sm:gap-[10px]">
                 <div
                   className={`${poppins.className} text-[#080E14] text-[14px] font-[600]`}
                 >
@@ -236,7 +242,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="relative top-4 flex w-full h-auto sm:w-[188px] sm:h-[118px] sm:flex-col justify-between items-start py-2 px-[14px] rounded-[12px] bg-[#FFF] border-[2px] border-solid border-[#06AA2F] gap-[10px]">
+              <div className="relative top-1 flex w-full md:h-[118px] sm:w-[188px] sm:h-[118px] sm:flex-col justify-between items-start py-2 px-[14px] rounded-[12px] bg-[#FFF] border-[2px] border-solid border-[#06AA2F] gap-[10px]">
                 <div
                   className={`${poppins.className} text-[#080E14] text-[14px] font-[600]`}
                 >
@@ -257,7 +263,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="hidden sm:mt-[20px] sm:max-w-[588px] sm:flex sm:flex-row sm:w-auto sm:justify-center sm:items-center sm:gap-[6px] sm:rounded-[12px] sm:bg-[#F1F2F6] sm:px-[12px]">
+            <div className="hidden sm:mt-[20px] sm:flex-wrap sm:max-w-[588px] sm:flex sm:flex-row sm:w-auto sm:justify-center sm:items-center sm:gap-[6px] sm:rounded-[12px] sm:bg-[#F1F2F6] sm:px-[12px]">
               <div
                 className={`${poppins.className} py-[8px] px-[16px] text-[#080E14] text-[14px] font-[500]`}
               >
@@ -315,7 +321,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="hidden sm:flex sm:flex-row sm:gap-3 sm:mt-[30px]">
+            <div className="hidden sm:flex sm:flex-wrap sm:flex-row sm:gap-3 sm:mt-[30px]">
               <div className="flex px-[32px] py-[12px] justify-center items-center gap-[10px] rounded-[12px] border-[1px] border-solid border-[#FFF]">
                 <div className="flex flex-row gap-2">
                   <div
