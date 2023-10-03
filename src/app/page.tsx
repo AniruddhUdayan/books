@@ -14,69 +14,77 @@ const poppins = Poppins({
 
 export default function Home() {
   const [imagePath, setImagePath] = useState("/images/book.png");
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [animationDirection, setAnimationDirection] = useState("left");
 
   const toggleImage = () => {
-    if (imagePath === "/images/book.png") {
-      setImagePath("/images/book2.png");
-    } else {
-      setImagePath("/images/book.png");
-    }
-  };
+    if (isAnimating) return;
 
+    setIsAnimating(true);
+
+    if (animationDirection === "left") {
+      setAnimationDirection("right");
+    } else {
+      setAnimationDirection("left");
+    }
+
+    setTimeout(() => {
+      if (imagePath === "/images/book.png") {
+        setImagePath("/images/book2.png");
+      } else {
+        setImagePath("/images/book.png");
+      }
+
+      setIsAnimating(false);
+    }, 0); // Adjust the delay duration as needed
+  };
   return (
     <>
       <Navbar />
       <div className="h-full bg-[#007BFF] pb-[61px] flex justify-center">
         <div className="sm:flex flex-wrap sm:flex-row sm:gap-[40px] sm:mx-[112px] sm:pt-[28px]">
           <div className="flex flex-col gap-[20px]">
-            <div className="sm:w-[588px] sm:h-[510px] sm:rounded-[20px] sm:bg-gradient-to-br from-blue-100 to-blue-200 flex flex-col">
-              <div className="w-full flex flex-col justify-end mt-[32px]">
-                <div className="hidden sm:flex sm:justify-end sm:w-full">
-                  <div
-                    className="h-[32px] w-[32px] mx-[32px] rounded-[50px] bg-white flex justify-center items-center"
-                    onClick={toggleImage}
-                  >
-                    <Image
-                      src="/images/share.png"
-                      alt="Your Logo"
-                      width={19.2}
-                      height={19.2}
-                    />
-                  </div>
-                </div>
-                <div className="flex flex-row gap-[55px] justify-center w-full relative bottom-6">
-                  <div className="hidden sm:h-full sm:flex sm:flex-col sm:justify-center">
-                    <div
-                      className="h-[32px] w-[32px] bg-white rounded-[8px] "
-                      onClick={toggleImage}
-                    >
-                      <Image
-                        src="/images/left.png"
-                        alt="Your Logo"
-                        width={32}
-                        height={32}
-                      />
-                    </div>
-                  </div>
+            <div className="flex h-full flex-row gap-[55px] justify-center w-full relative bottom-6">
+              <div className="hidden sm:h-full sm:flex sm:flex-col sm:justify-center">
+                <div
+                  className={`h-[32px] w-[32px] bg-white rounded-[8px] transform ${
+                    animationDirection === "right"
+                      ? "translate-x-[50px]"
+                      : "translate-x-0"
+                  } transition-transform`}
+                  onClick={toggleImage}
+                >
                   <Image
-                    src={imagePath} // Use the dynamic image path here
+                    src="/images/left.png"
                     alt="Your Logo"
-                    width={332}
-                    height={442}
+                    width={32}
+                    height={32}
                   />
-                  <div className="hidden sm:h-full sm:flex sm:flex-col sm:justify-center">
-                    <div
-                      className="h-[32px] w-[32px] bg-white rounded-[8px] transform rotate-180"
-                      onClick={toggleImage}
-                    >
-                      <Image
-                        src="/images/left.png"
-                        alt="Your Logo"
-                        width={32}
-                        height={32}
-                      />
-                    </div>
-                  </div>
+                </div>
+              </div>
+              <div className={`h-[418px] left-8 relative overflow-hidden`}>
+                <Image
+                  src={imagePath}
+                  alt="Your Logo"
+                  width={332}
+                  height={442}
+                />
+              </div>
+              <div className="hidden sm:h-full sm:flex sm:flex-col sm:justify-center">
+                <div
+                  className={`h-[32px] w-[32px] bg-white rounded-[8px] transform rotate-180 ${
+                    animationDirection === "left"
+                      ? "translate-x-[50px]"
+                      : "translate-x-0"
+                  } transition-transform`}
+                  onClick={toggleImage}
+                >
+                  <Image
+                    src="/images/left.png"
+                    alt="Your Logo"
+                    width={32}
+                    height={32}
+                  />
                 </div>
               </div>
             </div>
@@ -400,13 +408,13 @@ export default function Home() {
       </div>
       <Review />
       <div className="hidden w-auto bg-[#00364E] sm:flex flex-col justify-center items-center py-[80px] gap-[40px]">
-      <Image
+        <Image
           src="/images/neet.png"
           alt="Your Logo"
           width={880}
           height={144}
         />
-      <Image
+        <Image
           src="/images/testSeries.png"
           alt="Your Logo"
           width={806}
@@ -414,7 +422,7 @@ export default function Home() {
         />
       </div>
       <div className="sm:hidden bg-[#00364E] flex justify-center">
-      <Image
+        <Image
           src="/images/testSeries2.png"
           alt="Your Logo"
           width={375}
@@ -422,15 +430,15 @@ export default function Home() {
         />
       </div>
       <div className="bg-[#F1F2F6] pt-[80px] h-auto w-full sm:flex justify-center hidden">
-      <Image
-                      src="/images/app.png"
-                      alt="Your Logo"
-                      width={1040}
-                      height={659}
-                    />
+        <Image
+          src="/images/app.png"
+          alt="Your Logo"
+          width={1040}
+          height={659}
+        />
       </div>
       <div className="bg-[#F1F2F6] h-auto w-full flex justify-center sm:hidden">
-      <Image
+        <Image
           src="/images/app2.png"
           alt="Your Logo"
           width={375}
@@ -438,7 +446,7 @@ export default function Home() {
         />
       </div>
       <Bookdemo />
-      <Footer/>
+      <Footer />
     </>
   );
 }

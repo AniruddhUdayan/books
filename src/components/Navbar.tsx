@@ -58,7 +58,7 @@ const Navbar = () => {
           <div
             key={index}
             onClick={() => handleItemClick(index)}
-            className={`flex xl:px-[17px] py-[5px] items-start gap-[4px] rounded-[24px] ${
+            className={`flex  xl:px-[17px] py-[5px] items-start gap-[4px] rounded-[24px] transform hover:scale-105 transition-transform duration-300 hover:border hover:border-white cursor-pointer ${
               activeIndex === index
                 ? "border border-white border-opacity-25"
                 : ""
@@ -67,6 +67,10 @@ const Navbar = () => {
             } ${activeIndex === index ? "text-white" : "text-gray-300"} ${
               poppins.className
             } xl:text-base lg:text-[12px] uppercase tracking-wide text-[10px]`}
+            style={{
+              transform: activeIndex === index ? "scale(1.05)" : "scale(1)",
+              transition: "transform 0.2s ease-in-out",
+            }}
           >
             {item}
             <div className="">
@@ -82,7 +86,7 @@ const Navbar = () => {
       </div>
       <div className="hidden sm:flex sm:flex-row sm:justify-center sm:items-center gap-[10px] xl:gap-[34px] sm:mx-[10px]">
         <div className="flex flex-row items-center gap-[12px]">
-          <div className="h-[25px] w-[25px] xl:h-[40px] xl:w-[40px]">
+          <div className="h-[25px] w-[25px] xl:h-[40px] xl:w-[40px] transform hover:scale-105 transition-transform duration-300">
             <Image
               src="/images/Phone.png"
               alt="Your Logo"
@@ -103,9 +107,9 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className="flex px-[10px]  justify-center items-center rounded-[20px] border border-white   bg-white">
+        <div className="flex px-[10px]  justify-center items-center rounded-[20px] border border-white   bg-white transform hover:scale-105 transition-transform duration-300 cursor-pointer">
           <div
-            className={`${poppins.className} text-[#007BFF] flex justify-center items-center text-[10px] font-semibold leading-7`}
+            className={`${poppins.className} text-[#007BFF] flex justify-center items-center text-[10px] font-semibold leading-7 transform hover:scale-105 transition-transform duration-300`}
           >
             Sign In
           </div>
