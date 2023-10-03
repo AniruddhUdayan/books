@@ -65,7 +65,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div
-                    className={`h-[418px] top-3 sm:left-2 sm:top-6 relative overflow-hidden`}
+                    className={`h-[518px] flex justify-center items-center top-3 sm:left-2 sm:top-6 relative overflow-hidden`}
                   >
                     <Image
                       src={imagePath}
