@@ -26,7 +26,7 @@ const Bookdemo = () => {
       <div className="flex flex-col gap-1 w-auto justify-center mt-5">
         <div className="flex flex-row">
           <div
-            className={`${poppins.className} h-[56px] w-auto bg-white rounded-tl-[20px] rounded-bl-[20px] flex justify-center items-center px-[28px] text-[16px] font-[500]  gap-1`}
+            className={`${poppins.className} sm:h-[56px] sm:w-auto bg-white rounded-tl-[20px] rounded-bl-[20px] flex justify-center items-center px-2 py-2 sm:px-[28px] text-[14px] sm:text-[16px] font-[500]  sm:gap-1`}
           >
             <span>+91 </span>
             <input className="outline-none w-auto"
@@ -34,7 +34,7 @@ const Bookdemo = () => {
              />
             
           </div>
-          <button className="bg-[#007BFF] text-white px-[28px] rounded-tr-[20px] rounded-br-[20px]">book now</button>
+          <button className="bg-[#007BFF] text-white px-[24px] text-[14px] sm:text-[16px] sm:px-[28px] rounded-tr-[20px] rounded-br-[20px]">book now</button>
         </div>
         <div className={`text-white text-[16px] font-[500]`}>we will send an otp for verification</div>
       </div>
