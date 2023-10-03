@@ -94,9 +94,9 @@ const Navbar = () => {
               height={40}
             />
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col transform hover:scale-105 transition-transform duration-300">
             <div
-              className={`${poppins.className} text-center text-[#FCDE5A] text-[10px] xl:text-[14px] font-normal leading-5 lowercase`}
+              className={`${poppins.className} text-center text-[#FCDE5A] text-[10px] xl:text-[14px] font-normal leading-5 lowercase `}
             >
               need help? talk to experts
             </div>

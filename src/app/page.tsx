@@ -46,7 +46,7 @@ export default function Home() {
           <div className="flex flex-col gap-[20px]">
             <div className="flex h-full flex-col ">
               <div className=""> 
-                <div className="flex flex-row gap-[55px] justify-center w-full relative bottom-6 bg-[#D4E9FF]">
+                <div className="flex flex-row gap-[55px] justify-center w-full relative bottom-6 sm:bg-[#D4E9FF] sm:rounded-[20px]">
                   <div className="hidden sm:h-[510px] sm:flex sm:flex-col sm:justify-center relative right-6">
                     <div
                       className={`h-[32px] w-[32px] bg-white rounded-[8px] transform ${
@@ -65,7 +65,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div
-                    className={`h-[418px] left-2 top-6 relative overflow-hidden`}
+                    className={`h-[418px] top-3 sm:left-2 sm:top-6 relative overflow-hidden`}
                   >
                     <Image
                       src={imagePath}
@@ -170,7 +170,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-row flex-wrap mt-[25.5px] w-auto gap-3">
-              <div className="flex w-full sm:w-[188px] sm:flex-col justify-between items-start py-2 px-[14px] rounded-[12px] bg-[#FFF] border-[2px] border-solid border-[#06AA2F] gap-[10px]">
+              <div className="flex w-full sm:w-[188px] sm:flex-col justify-between items-start py-2 px-[14px] rounded-[12px] bg-[#FFF] border-[2px] border-solid border-[#06AA2F] gap-[10px] transform hover:scale-105 transition-transform duration-300">
                 <div>
                   {" "}
                   <div className="relative right-[21.5px]">
@@ -212,7 +212,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="relative top-1 flex justify-between w-full h-auto sm:w-[188px] sm:h-[118px] sm:flex-col sm:items-start py-2 px-[14px] rounded-[12px] bg-[#FFF] border-[2px] border-solid border-[#06AA2F] sm:gap-[10px]">
+              <div className="relative top-1 flex justify-between w-full h-auto sm:w-[188px] sm:h-[118px] sm:flex-col sm:items-start py-2 px-[14px] rounded-[12px] bg-[#FFF] border-[2px] border-solid border-[#06AA2F] sm:gap-[10px] transform hover:scale-105 transition-transform duration-300">
                 <div
                   className={`${poppins.className} text-[#080E14] text-[14px] font-[600]`}
                 >
@@ -242,7 +242,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="relative top-1 flex w-full md:h-[118px] sm:w-[188px] sm:h-[118px] sm:flex-col justify-between items-start py-2 px-[14px] rounded-[12px] bg-[#FFF] border-[2px] border-solid border-[#06AA2F] gap-[10px]">
+              <div className="relative top-1 flex w-full md:h-[118px] sm:w-[188px] sm:h-[118px] sm:flex-col justify-between items-start py-2 px-[14px] rounded-[12px] bg-[#FFF] border-[2px] border-solid border-[#06AA2F] gap-[10px] transform hover:scale-105 transition-transform duration-300">
                 <div
                   className={`${poppins.className} text-[#080E14] text-[14px] font-[600]`}
                 >
@@ -322,7 +322,7 @@ export default function Home() {
               </div>
             </div>
             <div className="hidden sm:flex sm:flex-wrap sm:flex-row sm:gap-3 sm:mt-[30px]">
-              <div className="flex px-[32px] py-[12px] justify-center items-center gap-[10px] rounded-[12px] border-[1px] border-solid border-[#FFF]">
+              <div className="flex px-[32px] py-[12px] justify-center items-center gap-[10px] rounded-[12px] border-[1px] border-solid border-[#FFF] transform hover:scale-105 transition-transform duration-300">
                 <div className="flex flex-row gap-2">
                   <div
                     className={`${poppins.className} text-[#FFF] text-[16px] font-[600]`}
@@ -337,7 +337,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="flex px-[62px] py-[12px] justify-center items-center gap-[10px] rounded-[12px] bg-[#FFF] ">
+              <div className="flex px-[62px] py-[12px] justify-center items-center gap-[10px] rounded-[12px] bg-[#FFF] transform hover:scale-105 transition-transform duration-300">
                 <div className="flex flex-row gap-2">
                   <div
                     className={`${poppins.className} text-[#007BFF] text-[16px] font-[600]`}

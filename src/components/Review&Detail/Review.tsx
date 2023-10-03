@@ -67,7 +67,7 @@ const Review = () => {
           details
         </div>
         <div className="max-w-[600px] flex flex-row flex-wrap w-auto h-auto gap-3">
-          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center">
+          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center transform hover:scale-105 transition-transform duration-300">
             <div className="flex flex-col gap-[20px] w-auto items-center">
               {" "}
               <Image
@@ -80,7 +80,7 @@ const Review = () => {
               <div className={`${poppins.className} text-[#000] text-[14px] font-[400]`}>no. of books</div>
             </div>
           </div>
-          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center">
+          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center transform hover:scale-105 transition-transform duration-300">
             <div className="flex flex-col gap-[20px] w-auto items-center">
               {" "}
               <Image
@@ -93,7 +93,7 @@ const Review = () => {
               <div className={`${poppins.className} text-[#000] text-[14px] font-[400]`}>no. of books</div>
             </div>
           </div>
-          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center">
+          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center transform hover:scale-105 transition-transform duration-300">
             <div className="flex flex-col gap-[20px] w-auto items-center">
               {" "}
               <Image
@@ -106,7 +106,7 @@ const Review = () => {
               <div className={`${poppins.className} text-[#000] text-[14px] font-[400]`}>no. of books</div>
             </div>
           </div>
-          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center">
+          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center transform hover:scale-105 transition-transform duration-300">
             <div className="flex flex-col gap-[20px] w-auto items-center">
               {" "}
               <Image
@@ -119,7 +119,7 @@ const Review = () => {
               <div className={`${poppins.className} text-[#000] text-[14px] font-[400]`}>no. of books</div>
             </div>
           </div>
-          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center">
+          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center transform hover:scale-105 transition-transform duration-300">
             <div className="flex flex-col gap-[20px] w-auto items-center">
               {" "}
               <Image
@@ -132,7 +132,7 @@ const Review = () => {
               <div className={`${poppins.className} text-[#000] text-[14px] font-[400]`}>no. of books</div>
             </div>
           </div>
-          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center">
+          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center transform hover:scale-105 transition-transform duration-300">
             <div className="flex flex-col gap-[20px] w-auto items-center">
               {" "}
               <Image
