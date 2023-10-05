@@ -1,11 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/NavBar/NavBar";
 import Image from "next/image";
 import { Poppins } from "next/font/google";
 import Review from "@/components/Review&Detail/Review";
 import Bookdemo from "@/components/BookDemo/Bookdemo";
 import Footer from "@/components/Footer/Footer";
+import NavBar from "@/components/NavBar/NavBar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -40,7 +41,7 @@ export default function Home() {
   };
   return (
     <>
-      <Navbar />
+      <NavBar/>
       <div className="h-full bg-[#007BFF] pb-[61px] flex justify-center">
         <div className="sm:flex sm:flex-col lg:flex-row sm:gap-[40px] sm:mx-[112px] sm:pt-[28px]">
           <div className="flex flex-col gap-[20px]">
