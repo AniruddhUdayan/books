@@ -148,7 +148,7 @@ function NavBar() {
           <div className="flex-grow">
             <ul className="flex justify-evenly">
               {items.map((item, index) => (
-                <div key={index} className="relative">
+                <div key={index} className="relative z-20">
                   <li
                     className={`flex px-7 items-center group hover:bg-blue-400 hover:border-white hover:border-2  hover:rounded-3xl p-1 `}
                     onClick={() => toggleSubMenu(index)}
@@ -158,7 +158,7 @@ function NavBar() {
                     <IoIosArrowDown size={15} />
                   </li>
                   {index === activeItem && foundItem && (
-                    <ul className="absolute w-fit  left-0 mt-2 bg-white  text-white border-white border-2 rounded-lg">
+                    <ul className="absolute w-fit  left-0 mt-4 bg-white  text-white border-white border-2 rounded-lg">
                       {foundItem?.subItems.map((subItem, subIndex) => (
                         <li
                           key={subIndex}
@@ -174,11 +174,11 @@ function NavBar() {
                             onSubMenuToggle={toggleSubMenuItems}
                           />
                           {activeSubItem != null && (
-                            <ul className=" rounded-lg absolute w-fit bg-white  border-white border-2 top-0 left-full flex flex-col  ">
+                            <ul className=" rounded-lg p-2 rounded-tl rounded-bl absolute w-fit bg-white  border-white border-2 top-[-3px] right-1  left-full flex flex-col">
                               {foundSubItem?.map((subItem, listItemIndex) => (
                                 <div
                                   key={listItemIndex}
-                                  className="flex items-center flex-col"
+                                  className="flex items-center flex-col relative z-50"
                                 >
                                   <div
                                     // onClick={() =>

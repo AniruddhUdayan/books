@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "@/components/NavBar/NavBar";
 import Image from "next/image";
 import { Poppins } from "next/font/google";
@@ -17,6 +17,8 @@ export default function Home() {
   const [imagePath, setImagePath] = useState("/images/book.png");
   const [isAnimating, setIsAnimating] = useState(false);
   const [animationDirection, setAnimationDirection] = useState("left");
+  const [text, setText] = useState("NEET Foundation");
+  const [isSlideDown, setIsSlideDown] = useState(false);
 
   const toggleImage = () => {
     if (isAnimating) return;
@@ -39,15 +41,38 @@ export default function Home() {
       setIsAnimating(false);
     }, 0); // Adjust the delay duration as needed
   };
+
+  useEffect(() => {
+    let timeout: string | number | NodeJS.Timeout | undefined;
+
+    const slideDown = () => {
+      setIsSlideDown(true);
+      timeout = setTimeout(() => {
+        setIsSlideDown(false);
+        setTimeout(() => {
+          slideDown();
+           // Repeat the animation
+        }, 2000);
+        // Stay for 2 seconds before sliding down
+      }, 2000);
+       // Slide down duration
+    };
+
+    slideDown(); // Start the animation
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
   return (
     <>
-      <NavBar/>
+      <NavBar />
       <div className="h-full bg-[#007BFF] pb-[61px] flex justify-center">
         <div className="sm:flex sm:flex-col lg:flex-row sm:gap-[40px] sm:mx-[112px] sm:pt-[28px]">
           <div className="flex flex-col gap-[20px]">
             <div className="flex h-full flex-col ">
-              <div className=""> 
-                <div className="flex flex-row gap-[55px] justify-center w-full relative bottom-6 sm:bg-[#D4E9FF] sm:rounded-[20px]">
+              <div className="">
+                <div className="flex flex-row gap-[55px] justify-center w-full relative bottom-6 sm:bg-[#D4E9FF] sm:rounded-[20px] z-0">
                   <div className="hidden sm:h-[510px] sm:flex sm:flex-col sm:justify-center relative right-6">
                     <div
                       className={`h-[32px] w-[32px] bg-white rounded-[8px] transform ${
@@ -103,8 +128,17 @@ export default function Home() {
             <div
               className={`${poppins.className} w-auto text-white sm:text-[48px] text-[20px] font-bold leading-60 `}
             >
-              IL books for{" "}
-              <span className="text-[#FCDE5A]">NEET Foundation</span>
+             <div > IL books for</div>
+              <div className="h-[72px] overflow-hidden w-auto relative">
+                <span
+                  className={`text-[#FCDE5A] inline-block transition-transform transform duration-[1000ms] ${
+                    isSlideDown ? "translate-y-0" : "-translate-y-full"
+                  }`}
+                  style={{ position: "absolute", top: 0, left: 0 }}
+                >
+                  {text}
+                </span>
+              </div>
               <span className="sm:text-[32px] font-[400]">
                 {" "}
                 - class 8, 9 & 10
@@ -323,8 +357,8 @@ export default function Home() {
               </div>
             </div>
             <div className="hidden sm:flex sm:flex-wrap sm:flex-row sm:gap-3 sm:mt-[30px]">
-              <div className="flex px-[32px] py-[12px] justify-center items-center gap-[10px] rounded-[12px] border-[1px] border-solid border-[#FFF] transform hover:scale-105 transition-transform duration-300">
-                <div className="flex flex-row gap-2">
+              <div className="flex px-[32px] py-[12px] justify-center items-center gap-[10px] rounded-[12px] border-[1px] border-solid border-[#FFF] transform hover:bg-[#007BFF]-100 transition-transform duration-300">
+                <div className="flex flex-row gap-2 hover:gap-3">
                   <div
                     className={`${poppins.className} text-[#FFF] text-[16px] font-[600]`}
                   >
