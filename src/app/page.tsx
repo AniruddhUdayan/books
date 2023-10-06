@@ -119,8 +119,17 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="hidden sm:w-[588px] sm:h-[60px] sm:rounded-[12px] sm:bg-[#00364E] sm:flex sm:justify-center sm:items-center sm:text-[#FFF] sm:text-[16px] sm:font-normal">
-                {`what's in it for you?`}
+              <div className="hidden sm:w-[588px] sm:h-[60px] sm:rounded-[12px] sm:bg-[#00364E] sm:flex sm:justify-center sm:items-center sm:text-[#FFF] sm:text-[16px] sm:font-normal sm:flex-row gap-[20px]">
+                <div>{`what's in it for you?`}</div>
+                <div className="flex justify-center items-center  rounded-[12px] bg-[#007BFF] text-[12px] font-[500] px-[8px] py-[4px] gap-1">
+                <Image
+                        src="/images/play.png"
+                        alt="Your Logo"
+                        width={15}
+                        height={15}
+                      />
+                      see now
+                </div>
               </div>
             </div>
           </div>

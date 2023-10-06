@@ -225,7 +225,7 @@ function Footer() {
                 <p>JEE Sample Papers</p>
               </Link>
               <Link href="/">
-                <p>JEE Previous Year's Papers</p>
+                <p>{`JEE Previous Year's Papers`}</p>
               </Link>
             </div>
             <div className="flex flex-col gap-1 font-[400]">
