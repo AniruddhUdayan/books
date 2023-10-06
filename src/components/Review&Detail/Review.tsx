@@ -67,7 +67,7 @@ const Review = () => {
           details
         </div>
         <div className="max-w-[600px] flex flex-row flex-wrap w-auto h-auto gap-3">
-          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center transform hover:scale-105 transition-transform duration-300">
+          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center transform hover:scale-105 hover:bg-[#e8e8e8] transition-transform duration-300">
             <div className="flex flex-col gap-[20px] w-auto items-center">
               {" "}
               <Image
@@ -80,69 +80,69 @@ const Review = () => {
               <div className={`${poppins.className} text-[#000] text-[14px] font-[400]`}>no. of books</div>
             </div>
           </div>
-          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center transform hover:scale-105 transition-transform duration-300">
+          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center transform hover:scale-105 hover:bg-[#e8e8e8] transition-transform duration-300">
             <div className="flex flex-col gap-[20px] w-auto items-center">
               {" "}
               <Image
-                src="/images/details.png"
+                src="/images/math.png"
                 alt="Your Logo"
                 width={42}
                 height={42}
               />
-              <div className={`${poppins.className} text-[#000] text-[20px] font-[600]`}>48</div>
-              <div className={`${poppins.className} text-[#000] text-[14px] font-[400]`}>no. of books</div>
+              <div className={`${poppins.className} text-[#000] text-[20px] font-[600]`}>10003</div>
+              <div className={`${poppins.className} text-[#000] text-[14px] font-[400]`}>pages</div>
             </div>
           </div>
-          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center transform hover:scale-105 transition-transform duration-300">
+          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center transform hover:scale-105 hover:bg-[#e8e8e8]  transition-transform duration-300">
             <div className="flex flex-col gap-[20px] w-auto items-center">
               {" "}
               <Image
-                src="/images/details.png"
+                src="/images/layer.png"
                 alt="Your Logo"
                 width={42}
                 height={42}
               />
-              <div className={`${poppins.className} text-[#000] text-[20px] font-[600]`}>48</div>
-              <div className={`${poppins.className} text-[#000] text-[14px] font-[400]`}>no. of books</div>
+              <div className={`${poppins.className} text-[#000] text-[20px] font-[600]`}>English</div>
+              <div className={`${poppins.className} text-[#000] text-[14px] font-[400]`}>language</div>
             </div>
           </div>
-          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center transform hover:scale-105 transition-transform duration-300">
+          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center transform hover:scale-105 hover:bg-[#e8e8e8]  transition-transform duration-300">
             <div className="flex flex-col gap-[20px] w-auto items-center">
               {" "}
               <Image
-                src="/images/details.png"
+                src="/images/layer.png"
                 alt="Your Logo"
                 width={42}
                 height={42}
               />
-              <div className={`${poppins.className} text-[#000] text-[20px] font-[600]`}>48</div>
-              <div className={`${poppins.className} text-[#000] text-[14px] font-[400]`}>no. of books</div>
+              <div className={`${poppins.className} text-[#000] text-[20px] font-[600]`}>Infinity Learn</div>
+              <div className={`${poppins.className} text-[#000] text-[14px] font-[400]`}>publisher</div>
             </div>
           </div>
-          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center transform hover:scale-105 transition-transform duration-300">
+          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center transform hover:scale-105 hover:bg-[#e8e8e8]  transition-transform duration-300">
             <div className="flex flex-col gap-[20px] w-auto items-center">
               {" "}
               <Image
-                src="/images/details.png"
+                src="/images/layer.png"
                 alt="Your Logo"
                 width={42}
                 height={42}
               />
-              <div className={`${poppins.className} text-[#000] text-[20px] font-[600]`}>48</div>
-              <div className={`${poppins.className} text-[#000] text-[14px] font-[400]`}>no. of books</div>
+              <div className={`${poppins.className} text-[#000] text-[20px] font-[600]`}>January 2023</div>
+              <div className={`${poppins.className} text-[#000] text-[14px] font-[400]`}>publication date</div>
             </div>
           </div>
-          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center transform hover:scale-105 transition-transform duration-300">
+          <div className="w-[188px] h-[154px] rounded-[12px] bg-[#F1F2F6] flex justify-center items-center transform hover:scale-105 hover:bg-[#e8e8e8]   transition-transform duration-300">
             <div className="flex flex-col gap-[20px] w-auto items-center">
               {" "}
               <Image
-                src="/images/details.png"
+                src="/images/layer.png"
                 alt="Your Logo"
                 width={42}
                 height={42}
               />
-              <div className={`${poppins.className} text-[#000] text-[20px] font-[600]`}>48</div>
-              <div className={`${poppins.className} text-[#000] text-[14px] font-[400]`}>no. of books</div>
+              <div className={`${poppins.className} text-[#000] text-[20px] font-[600]`}>21 x 15.2 x 4 cm</div>
+              <div className={`${poppins.className} text-[#000] text-[14px] font-[400]`}>dimensions</div>
             </div>
           </div>
         </div>
